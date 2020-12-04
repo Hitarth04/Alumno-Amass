@@ -1,0 +1,127 @@
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            position: relative;
+            background-color: #111;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(backgroung.jpg);
+            background-size: cover;
+        }
+
+        .container{
+            min-width: 700px;
+            min-height: 350px;
+            border-radius: 20px;
+            position: relative;
+            transition: 1.5s ease-in-out;
+            transform-style: preserve-3d;
+        }
+
+        .side{
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            padding: 20px 50px;
+            color: white;
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            border-radius: 20px;
+        }
+
+        .content{
+            transform: translateZ(70px) scale(0.8);
+            line-height: 1.5em;
+        }
+
+        .content h1{
+            position: relative;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+
+        }
+
+        .content h1:before{
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            height: 3px;
+            background-color: black;
+            width: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+        .front{
+            z-index: 2;
+            background-color: aqua;
+            background-image: url(bg-slider-1.png);
+            background-size: cover;
+            background-size: 100vh;
+            color: white;
+        }
+
+        .back{
+            background-color: aqua;
+            z-index: 0;
+            padding-top: 10px;
+            background-image: url(invert_final-8.png);
+            background-size: cover;
+        }
+
+        .back h1{
+            margin: 0;
+        }
+
+        form label, form input{
+            display: block;
+        }
+
+        form input, form textarea{
+            background: transparent;
+            border: 0;
+            border-bottom: 2px solid black;
+            padding: 5px;
+            width: 100%;
+            color: black;
+            outline: none; 
+        }
+
+        form input::placeholder, form textarea::placeholder{
+            color: black;
+        }
+
+        form label{
+            text-align: left;
+            margin: 15px 0;
+            color: white;
+
+        }
+
+        form input[type="submit"]{
+            display: block;
+            width: auto;
+            margin: 10px auto;
+            padding: 5px 10px;
+            border: 3px solid white;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
